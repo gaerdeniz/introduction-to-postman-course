@@ -1,0 +1,6 @@
+API= Interface of a server with data in it or connected to an action
+Parametres= additional data to submit the request. for some apis they are mandatory
+          keys come before ?, in relation to category(books). after that, we can also filter it through value. 
+          f.e= {{baseURL}}/books?available=true---> we are looking for books that's key= available and value of the key=true
+Multiple parametres. each parametre connect to other with &
+          fe= {{baseURL}}/books?available=false&type=non-fiction
