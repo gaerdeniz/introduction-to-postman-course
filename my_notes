@@ -1,4 +1,5 @@
-API= Interface of a server with data in it or connected to an action
+API= Interface of a server with data in it or connected to an action (https://www.youtube.com/watch?v=VywxIQ2ZXw4)
+GET
 Parametres= additional data to submit the request. for some apis they are mandatory
           keys come before ?, in relation to category(books). after that, we can also filter it through value. 
           f.e= {{baseURL}}/books?available=true---> we are looking for books that's key= available and value of the key=true
@@ -7,3 +8,4 @@ Multiple parametres. each parametre connect to other with &
 Lesson 9= Path parametres/variables are different than query parametres. path= baseurl/:pp
            you can send query params empty, but you can't send path parametres empty, if it is included in the request. 
            path parametres doesn't show up in the url
+POST
