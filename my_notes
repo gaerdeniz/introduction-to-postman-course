@@ -9,3 +9,6 @@ Lesson 9= Path parametres/variables are different than query parametres. path= b
            you can send query params empty, but you can't send path parametres empty, if it is included in the request. 
            path parametres doesn't show up in the url
 POST
+Posting means registering, and in the most cases(unless it's a public API) we need authorization to register things. This also may occur in different commands like delete etc.
+For registration= baseurl/api-clients---> body-->raw--->json. implement the information given in the API document. Result: getting a token to access.
+We need to enter this token to "Authorization" part. 
