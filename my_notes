@@ -12,8 +12,11 @@ POST
 Posting means registering, and in the most cases(unless it's a public API) we need authorization to register things. This also may occur in different commands like delete etc.
 For registration= baseurl/api-clients---> body-->raw--->json. implement the information given in the API document. Result: getting a token to access.
 We need to enter this token to "Authorization" part. 
+
 TEST AUTOMATION 
 Under the part we write urls, there is a test section where we can utilize from snippets instead of writing a code. We can test multiple script at once.
 To get status results written in json(bec they are normally in Javascript), you need to include sending this in the script section: const response = pm.response.json(); console.log(response);
 To get only 'OK' in status in console(json language), you should send the script like this: const response = pm.response.json(); console.log(response.status);
 *Testing without snippet codes---> pm.test("f.e: Status should be OK"), function() { pm.expect().to.eql() }
+variables: https://learning.postman.com/docs/sending-requests/variables/
+pm.test---> a-must parameter to use while testing
