@@ -19,4 +19,7 @@ To get status results written in json(bec they are normally in Javascript), you 
 To get only 'OK' in status in console(json language), you should send the script like this: const response = pm.response.json(); console.log(response.status);
 *Testing without snippet codes---> pm.test("f.e: Status should be OK"), function() { pm.expect().to.eql() }
 variables: https://learning.postman.com/docs/sending-requests/variables/
+Test cases and functions: https://www.softwaretestingmaterial.com/api-test-cases-in-postman-using-javascript/
 pm.test---> a-must parameter to use while testing
+pm.expect()---> assertion function makes it easy to write readable tests, and we can deal with assertions of data from a response or variables. f.e= pm.test("environment to be production", function () { pm.expect(pm.environment.get("env")).to.equal("production"); });
+pm.response.to.be---> object provides tests for response status types and body variations. f.e= pm.test("response is ok", function () { pm.response.to.have.status(200); });
