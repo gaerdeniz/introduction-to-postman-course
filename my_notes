@@ -23,3 +23,19 @@ Test cases and functions: https://www.softwaretestingmaterial.com/api-test-cases
 pm.test---> a-must parameter to use while testing
 pm.expect()---> assertion function makes it easy to write readable tests, and we can deal with assertions of data from a response or variables. f.e= pm.test("environment to be production", function () { pm.expect(pm.environment.get("env")).to.equal("production"); });
 pm.response.to.be---> object provides tests for response status types and body variations. f.e= pm.test("response is ok", function () { pm.response.to.have.status(200); });
+
+javascript version vs json version
+javascript(get book list non-fiction, response= [{"id":2,"name":"Just as I Am","type":"non-fiction","available":false},{"id":5,"name":"Untamed","type":"non-fiction","available":true}] )
+json(get book list non-fiction, response= 2) [{…}, {…}] 0: {…} id: 2 name: "Just as I Am" type: "non-fiction" available: false 1: {…} id: 5 name: "Untamed" type: "non-fiction" available: true )
+the reason we prefer json over javascript is json giving us more clearer access to the list
+
+***clear look at getting clear list for a specific request*** (otherwise we have change parametres for each request and if the data is big, it may cause a problem)
+pm.test("Response time is less than 200ms", function () {
+    pm.response.to.have.status(200);
+});
+const response= pm.response.json();
+console.log(response[1].id); ---> bring only the ids where availability(according to the api we have(booklist)) is true. if we want to see availability=false, we have write 0.
+***clear look at getting clear list for a specific request***
+
+Global value==> to set what you want to see specific value and parametres without going parametres. pm.globals.set("bookId", nonFictionBook[0].id);
+you can also see previous global values you set through the eye-ish buton in the right side of the postman dashboard.
